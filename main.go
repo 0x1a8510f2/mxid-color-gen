@@ -46,15 +46,17 @@ func main() {
 		return
 	}
 
+	fmt.Printf("MXID:            %s\n", args[1])
+
 	hash := GetMxidHash(args[1])
 
-	fmt.Printf("mxid hash: %d\n", hash)
+	fmt.Printf("MXID HASH:       %d\n", hash)
 
 	colorNumber := GetColorNumberFromHash(hash)
 
-	fmt.Printf("color number: %d\n", colorNumber+1)
+	fmt.Printf("COLOR NUMBER:    %d\n", colorNumber+1)
 
-	println(map[int]string{
+	fmt.Printf("HEX COLOR CODE:  %s\n", map[int]string{
 		0: CLR_1,
 		1: CLR_2,
 		2: CLR_3,
